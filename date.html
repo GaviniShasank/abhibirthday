@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Senior</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome">
+   
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+     <!-- Navbar start -->
+     <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                    <a href="senior.html" class="navbar-brand">
+                        <h4 class="text-primary display-6 fw-bold mb-0">      we <strong class="text-secondary">love u </strong>Mano</h4>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top">
+                            <a href="senior.html" class="nav-item nav-link active">Manu</a>
+                            <a href="date.html" class="nav-item nav-link">We love you</a>
+                            <a href="about.html" class="nav-item nav-link">Junior</a>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                            <a href="#weddingRsvp" class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">We are waiting for your next Birthday</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!--- Wedding Date -->
+    <div class="container-fluid wedding-date-bg position-relative py-5">
+        <div class="position-absolute" style="top: -100px; right: 0;">
+            <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+        </div>
+        <div class="position-absolute" style="top: -80px; left: 0; transform: rotate(150deg);">
+            <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+        </div>
+        <div class="container py-5 wow zoomIn" data-wow-delay="0.1s">
+            <div class="wedding-date text-center bg-light p-5" style="border-style: double !important; border: 15px solid rgba(253, 93, 93, 0.5);">
+                <div class="wedding-date-content">
+                    <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-4" style="border-style: double;">
+                        <h4 class="text-dark text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">March 28, 2025</h4>
+                    </div>
+                    <h1 class="display-4">Happy Birthday Senior💗</h1>
+                    <p class="text-dark fs-5">When Your tired,dont think twice before falling into my arms i am tired too but i will never run out of love for you.</p>
+                    <div class="d-flex align-items-center justify-content-center mb-5">
+                        <div id="countdown"></div>
+                    </div>
+                    <a class="btn btn-primary btn-primary-outline-0 py-3 px-5" href="#">We love you Abhii💕</a>
+                </div>
+                <div class="position-absolute" style="top: 15%; right: -30px; transform: rotate(320deg); opacity: 0.5; z-index: 1;">
+                    <img src="img/attendance-bg.png" class="img-fluid" alt="">
+                </div>
+                <div class="position-absolute" style="top: 15%; left: -10px; transform: rotate(-320deg); opacity: 0.5; z-index: 1;">
+                    <img src="img/attendance-bg.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Wedding Date -->
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        // Set the date of your wedding
+        var weddingDate = new Date("March 28, 2025 00:00:00").getTime();
+
+        // Update the countdown every second
+        var x = setInterval(function () {
+
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Calculate the time remaining until the wedding date
+            var distance = weddingDate - now;
+
+            // Calculate days, hours, minutes, and seconds remaining
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown in a single line
+            document.getElementById("countdown").innerHTML =
+                days + " Days " +
+                hours + " Hours " +
+                minutes + " Minutes " +
+                seconds + " Seconds ";
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000); // Update every second
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
