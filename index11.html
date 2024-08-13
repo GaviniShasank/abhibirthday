@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Input</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 90%;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #333333;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    input[type="password"] {
+        width: calc(100% - 24px);
+        padding: 14px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border: 2px solid #cccccc;
+        border-radius: 8px;
+        font-size: 18px;
+        transition: border-color 0.3s ease;
+        outline: none;
+    }
+
+    input[type="password"]:focus {
+        border-color: #4CAF50;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #ffffff;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>You Need permission To login
+    </h2>
+    <form onsubmit="return checkPassword()">
+        <input type="password" id="password" placeholder="Enter password" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function checkPassword() {
+        var passwordInput = document.getElementById('password');
+        var password = passwordInput.value.trim(); 
+    
+        // Change the password here
+        var correctPassword = "Shasank@123";
+    
+        if (password === "") {
+            alert("Please enter a password.");
+            return false;
+        }
+    
+        if (password === correctPassword) {
+            window.location.href = "about.html";
+            return false; 
+        } else {
+            alert("Incorrect password. Heyi senior, You can do it!");
+            passwordInput.value = ""; 
+            passwordInput.focus(); 
+            return false; 
+        }
+    }
+</script>
+
+</body>
+</html>
